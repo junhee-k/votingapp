@@ -45,16 +45,38 @@ git commit -m "Describe the change"
 git push origin feature-branch-name
 ```
 
-## 4. Pull Requests (PR)
-- Open a PR when a feature is ready for review.
-- Assign at least one reviewer.
-- Merge only after approval.
-- Always **pull latest changes** before starting new work:
-```sh
-git checkout main
-git pull origin main
-git checkout -b new-feature-branch
-```
+## 4. Pull Requests (PR) and Feature Merging Process
+### Creating a Pull Request (PR)
+- Once your feature branch is ready for review, go to the repository on GitHub.
+- Click on the **Pull Requests** tab.
+- Click **New Pull Request**.
+- Select your branch as the source and `main` as the target.
+- Add a title and description for your changes.
+- Click **Create Pull Request**.
+
+### Reviewing a Pull Request
+1. Navigate to the **Pull Requests** tab in the GitHub repository.
+2. Click on the PR that needs to be reviewed.
+3. Review the code changes:
+   - Use **Files changed** to see modifications.
+   - Add comments on specific lines if needed.
+   - Check for best practices and correctness.
+4. Approve or request changes:
+   - Click **Review changes**.
+   - Choose **Approve** if the changes are good, or **Request changes** if modifications are needed.
+   - Leave a comment summarizing your review.
+   - Click **Submit review**.
+
+### Merging a Pull Request into `main`
+- Once the PR is approved, click **Merge pull request**.
+- Choose **Squash and merge** (if commits need to be combined) or **Merge commit** (to keep commit history).
+- Click **Confirm merge**.
+- Delete the feature branch after merging by clicking **Delete branch**.
+- Pull the latest changes to your local `main` branch:
+  ```sh
+  git checkout main
+  git pull origin main
+  ```
 
 ## 5. Code & Commit Guidelines
 - Follow Flutter's best practices.
